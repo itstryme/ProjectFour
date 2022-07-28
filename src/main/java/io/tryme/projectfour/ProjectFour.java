@@ -6,6 +6,7 @@ import io.tryme.projectfour.util.ModRegistries;
 import io.tryme.projectfour.world.biome.BiomeRegions;
 import io.tryme.projectfour.world.biome.BiomeRegistry;
 import io.tryme.projectfour.world.biome.OverworldSurfaceRules;
+import io.tryme.projectfour.world.gen.feature.TreeConfiguredFeatures;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
@@ -20,6 +21,8 @@ public class ProjectFour implements ModInitializer, TerraBlenderApi {
 
 	@Override
 	public void onInitialize() {
+		TreeConfiguredFeatures.registerTreeConfiguredFeatures();
+
 		BiomeRegistry.registerBiomes();
 
 		Blocks.registerModBlocks();

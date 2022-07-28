@@ -5,17 +5,11 @@ import net.minecraft.sound.BiomeMoodSound;
 import net.minecraft.sound.MusicSound;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.BiomeEffects;
 import net.minecraft.world.biome.GenerationSettings;
 import net.minecraft.world.biome.SpawnSettings;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 
 import javax.annotation.Nullable;
-
-/*
-Second Step:
-Create the Biomes
- */
 
 public class OverworldBiomeCreator {
     @Nullable
@@ -73,21 +67,8 @@ public class OverworldBiomeCreator {
 
         GenerationSettings.Builder generationBuilder = new GenerationSettings.Builder();
         DefaultBiomeFeatures.addForestGrass(generationBuilder);
+        ModBiomeFeatures.addRedwoodTrees(generationBuilder);
 
-        return (new net.minecraft.world.biome.Biome.Builder())
-                .precipitation(Biome.Precipitation.RAIN)
-                .temperature(0.7F)
-                .downfall(0.8F)
-                .effects((new net.minecraft.world.biome.BiomeEffects.Builder())
-                        .waterColor(4159204)
-                        .waterFogColor(329011)
-                        .fogColor(12638463)
-                        .skyColor(calculateSkyColor(0.7F))
-                        .grassColorModifier(BiomeEffects.GrassColorModifier.DARK_FOREST)
-                        .moodSound(BiomeMoodSound.CAVE)
-                        .music(NORMAL_MUSIC).build())
-                .spawnSettings(spawnBuilder.build())
-                .generationSettings(generationBuilder.build())
-                .build();
+        return createBiome(Biome.Precipitation.RAIN, 0.7f, 0.8F, spawnBuilder, generationBuilder, NORMAL_MUSIC);
     }
 }

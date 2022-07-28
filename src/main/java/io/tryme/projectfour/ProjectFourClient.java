@@ -10,5 +10,6 @@ public class ProjectFourClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks.REDWOOD_LEAVES, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.REDWOOD_SAPLING, RenderLayer.getCutout());
     }
 }

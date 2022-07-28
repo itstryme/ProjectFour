@@ -1,12 +1,10 @@
 package io.tryme.projectfour.block;
 
 import io.tryme.projectfour.ProjectFour;
+import io.tryme.projectfour.block.sapling.RedwoodSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.LeavesBlock;
-import net.minecraft.block.Material;
-import net.minecraft.block.PillarBlock;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -38,6 +36,10 @@ public class Blocks {
 
     public static final Block REDWOOD_PLANKS = registerBlock("redwood_planks",
             new Block(FabricBlockSettings.copyOf(net.minecraft.block.Blocks.OAK_PLANKS)),
+            ItemGroup.MISC);
+
+    public static final Block REDWOOD_SAPLING = registerBlock("redwood_sapling",
+            new SaplingBlock(new RedwoodSaplingGenerator(), FabricBlockSettings.copyOf(net.minecraft.block.Blocks.OAK_SAPLING)),
             ItemGroup.MISC);
 
     public static Block registerBlock(String name, Block block, ItemGroup group) {
