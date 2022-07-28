@@ -20,11 +20,11 @@ public class ProjectFour implements ModInitializer, TerraBlenderApi {
 
 	@Override
 	public void onInitialize() {
+		BiomeRegistry.registerBiomes();
+
 		Blocks.registerModBlocks();
 		Items.registerModItems();
 		ModRegistries.registerModStuffs();
-
-		BiomeRegistry.registerBiomes();
 	}
 
 	@Override

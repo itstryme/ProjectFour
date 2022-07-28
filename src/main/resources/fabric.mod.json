@@ -23,6 +23,9 @@
     ],
     "client": [
       "io.tryme.projectfour.ProjectFourClient"
+    ],
+    "terrablender": [
+      "io.tryme.projectfour.ProjectFour"
     ]
   },
   "mixins": [
