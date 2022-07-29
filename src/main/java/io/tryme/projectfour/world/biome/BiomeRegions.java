@@ -5,8 +5,8 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.biome.source.util.MultiNoiseUtil;
+import terrablender.api.ParameterUtils;
 import terrablender.api.Region;
 import terrablender.api.RegionType;
 
@@ -19,8 +19,15 @@ public class BiomeRegions extends Region {
 
     @Override
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<MultiNoiseUtil.NoiseHypercube, RegistryKey<Biome>>> mapper) {
-        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
-            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.TAIGA, io.tryme.projectfour.world.biome.BiomeKeys.REDWOOD_FOREST);
-        });
+        this.addBiome(mapper,
+                ParameterUtils.Temperature.NEUTRAL,
+                ParameterUtils.Humidity.NEUTRAL,
+                ParameterUtils.Continentalness.MID_INLAND,
+                ParameterUtils.Erosion.EROSION_0,
+                ParameterUtils.Weirdness.VALLEY,
+                ParameterUtils.Depth.SURFACE,
+                0,
+                BiomeKeys.REDWOOD_FOREST);
+
     }
 }
