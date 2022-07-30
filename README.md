@@ -7,7 +7,7 @@ Project Four is a Mod that adds 4 new amazing biomes into Minecraft, it offers n
 ## Developers
 
 - [@Tryme](https://discord.gg/kYtNzk4guJ)
-- [@Phobetor](something)
+- [@Phobetor](https://twitter.com/phobetortdl?t=8M_Hs9Dx_CkIRbvxqV54iA&s=09)
 
 
 ## FAQ
