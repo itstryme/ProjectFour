@@ -1,6 +1,5 @@
 package io.tryme.projectfour.world.biome;
 
-import io.tryme.projectfour.ProjectFour;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
@@ -12,6 +11,6 @@ public class BiomeKeys {
 
     private static RegistryKey<Biome> register(String name)
     {
-        return RegistryKey.of(Registry.BIOME_KEY, new Identifier(ProjectFour.MOD_ID, name));
+        return RegistryKey.of(Registry.BIOME_KEY, new Identifier(name));
     }
 }

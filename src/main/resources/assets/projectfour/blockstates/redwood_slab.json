@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "projectfour:block/redwood_slab"
+    },
+    "type=double": {
+      "model": "projectfour:block/redwood_planks"
+    },
+    "type=top": {
+      "model": "projectfour:block/redwood_slab_top"
+    }
+  }
+}

@@ -42,6 +42,64 @@ public class Blocks {
             new SaplingBlock(new RedwoodSaplingGenerator(), FabricBlockSettings.copyOf(net.minecraft.block.Blocks.OAK_SAPLING)),
             ItemGroup.MISC);
 
+    public static final Block REDWOOD_BUTTON = registerBlock("redwood_button",
+            new WoodenButtonBlock(FabricBlockSettings.of(Material.WOOD)
+                    .noCollision()
+                    .requiresTool()
+                    .strength(0.5f, 0.5f)),
+            ItemGroup.MISC);
+
+    public static final Block REDWOOD_PRESSURE_PLATE = registerBlock("redwood_pressure_plate",
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
+                    FabricBlockSettings.of(Material.WOOD)
+                            .strength(0.5f, 0.5f)
+                            .requiresTool()),
+            ItemGroup.MISC);
+
+    public static final Block REDWOOD_FENCE = registerBlock("redwood_fence",
+            new FenceBlock(FabricBlockSettings.of(Material.WOOD)
+                    .hardness(2f)
+                    .resistance(3f)
+                    .requiresTool()),
+            ItemGroup.MISC);
+
+    public static final Block REDWOOD_FENCE_GATE = registerBlock("redwood_fence_gate",
+            new FenceGateBlock(FabricBlockSettings.of(Material.WOOD)
+                    .hardness(2f)
+                    .resistance(3f)
+                    .requiresTool()),
+            ItemGroup.MISC);
+
+    public static final Block REDWOOD_SLAB = registerBlock("redwood_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.WOOD)
+                    .requiresTool()
+                    .strength(2f)
+                    .resistance(3f)),
+            ItemGroup.MISC);
+
+    public static final Block REDWOOD_STAIRS = registerBlock("redwood_stairs",
+            new StairsBlock(REDWOOD_PLANKS.getDefaultState(), FabricBlockSettings.of(Material.WOOD)
+                    .requiresTool()
+                    .strength(2f)
+                    .resistance(3f)),
+            ItemGroup.MISC);
+
+    public static final Block REDWOOD_DOOR = registerBlock("redwood_door",
+            new DoorBlock(FabricBlockSettings.of(Material.WOOD)
+                    .requiresTool()
+                    .strength(2f)
+                    .resistance(3f)
+                    .nonOpaque()),
+            ItemGroup.MISC);
+
+    public static final Block REDWOOD_TRAPDOOR = registerBlock("redwood_trapdoor",
+            new TrapdoorBlock(FabricBlockSettings.of(Material.WOOD)
+                    .requiresTool()
+                    .strength(2f)
+                    .resistance(3f)
+                    .nonOpaque()),
+            ItemGroup.MISC);
+
     public static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
         return Registry.register(Registry.BLOCK, new Identifier(ProjectFour.MOD_ID, name), block);
