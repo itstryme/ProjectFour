@@ -12,6 +12,10 @@ Project Four is a Mod that adds 4 new amazing biomes into Minecraft, it offers n
 
 ## FAQ
 
+#### What ModLoaders is Project Four gonna be available on?
+
+Project Four is currently in development for the Fabric ModLoader. There are no plans to make this mod compatible with Forge ModLoader at this time, but if someone wants to help me port it over I would be happy to consider it. There are plans for Quilt ModLoader compatibility though.
+
 #### When will Project Four Release?
 
 We don't have a clear date on when the Minecraft Mod is going to release. We know you're all excited for it, and so are we, but unfortunately there are still some things left to do. We'll make sure to post an update as soon as we have one.
