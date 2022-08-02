@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "projectfour:wisteria_log",
+    "projectfour:wisteria_wood",
+    "projectfour:stripped_wisteria_log",
+    "projectfour:stripped_wisteria_wood"
+  ]
+}

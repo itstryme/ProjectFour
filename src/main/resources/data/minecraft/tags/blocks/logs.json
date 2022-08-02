@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "#projectfour:redwood_logs"
+    "#projectfour:redwood_logs",
+    "#projectfour:wisteria_logs"
   ]
 }
