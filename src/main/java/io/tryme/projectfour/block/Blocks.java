@@ -148,6 +148,64 @@ public class Blocks {
             new Block(FabricBlockSettings.copyOf(net.minecraft.block.Blocks.OAK_PLANKS)),
             ItemGroup.MISC);
 
+    public static final Block WISTERIA_BUTTON = registerBlock("wisteria_button",
+            new WoodenButtonBlock(FabricBlockSettings.of(Material.WOOD)
+                    .noCollision()
+                    .requiresTool()
+                    .strength(0.5f, 0.5f)),
+            ItemGroup.MISC);
+
+    public static final Block WISTERIA_PRESSURE_PLATE = registerBlock("wisteria_pressure_plate",
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
+                    FabricBlockSettings.of(Material.WOOD)
+                            .strength(0.5f, 0.5f)
+                            .requiresTool()),
+            ItemGroup.MISC);
+
+    public static final Block WISTERIA_FENCE = registerBlock("wisteria_fence",
+            new FenceBlock(FabricBlockSettings.of(Material.WOOD)
+                    .hardness(2f)
+                    .resistance(3f)
+                    .requiresTool()),
+            ItemGroup.MISC);
+
+    public static final Block WISTERIA_FENCE_GATE = registerBlock("wisteria_fence_gate",
+            new FenceGateBlock(FabricBlockSettings.of(Material.WOOD)
+                    .hardness(2f)
+                    .resistance(3f)
+                    .requiresTool()),
+            ItemGroup.MISC);
+
+    public static final Block WISTERIA_SLAB = registerBlock("wisteria_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.WOOD)
+                    .requiresTool()
+                    .strength(2f)
+                    .resistance(3f)),
+            ItemGroup.MISC);
+
+    public static final Block WISTERIA_STAIRS = registerBlock("wisteria_stairs",
+            new StairsBlock(REDWOOD_PLANKS.getDefaultState(), FabricBlockSettings.of(Material.WOOD)
+                    .requiresTool()
+                    .strength(2f)
+                    .resistance(3f)),
+            ItemGroup.MISC);
+
+    public static final Block WISTERIA_DOOR = registerBlock("wisteria_door",
+            new DoorBlock(FabricBlockSettings.of(Material.WOOD)
+                    .requiresTool()
+                    .strength(2f)
+                    .resistance(3f)
+                    .nonOpaque()),
+            ItemGroup.MISC);
+
+    public static final Block WISTERIA_TRAPDOOR = registerBlock("wisteria_trapdoor",
+            new TrapdoorBlock(FabricBlockSettings.of(Material.WOOD)
+                    .requiresTool()
+                    .strength(2f)
+                    .resistance(3f)
+                    .nonOpaque()),
+            ItemGroup.MISC);
+
 
 
     // Registry Methods

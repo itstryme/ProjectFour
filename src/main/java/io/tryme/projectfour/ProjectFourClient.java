@@ -1,8 +1,12 @@
 package io.tryme.projectfour;
 
 import io.tryme.projectfour.block.Blocks;
+import io.tryme.projectfour.client.BetaText;
+
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
+
 import net.minecraft.block.Block;
 import net.minecraft.client.render.RenderLayer;
 
@@ -16,5 +20,10 @@ public class ProjectFourClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks.WHITE_WISTERIA_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks.BLUE_WISTERIA_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks.PINK_WISTERIA_LEAVES, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.WISTERIA_DOOR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.WISTERIA_TRAPDOOR, RenderLayer.getCutout());
+
+        HudRenderCallback.EVENT.register(new BetaText());
     }
 }

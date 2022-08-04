@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "projectfour:block/wisteria_slab"
+    },
+    "type=double": {
+      "model": "projectfour:block/wisteria_planks"
+    },
+    "type=top": {
+      "model": "projectfour:block/wisteria_slab_top"
+    }
+  }
+}

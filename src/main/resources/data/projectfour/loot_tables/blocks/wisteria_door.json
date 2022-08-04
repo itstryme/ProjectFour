@@ -13,14 +13,14 @@
           "type": "minecraft:item",
           "conditions": [
             {
-              "block": "projectfour:redwood_door",
+              "block": "projectfour:wisteria_door",
               "condition": "minecraft:block_state_property",
               "properties": {
                 "half": "lower"
               }
             }
           ],
-          "name": "projectfour:redwood_door"
+          "name": "projectfour:wisteria_door"
         }
       ],
       "rolls": 1.0

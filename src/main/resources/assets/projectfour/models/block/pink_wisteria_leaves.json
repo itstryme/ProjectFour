@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "projectfour:block/pink_wisteria_leaves"
+  }
+}
