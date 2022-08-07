@@ -1,4 +1,4 @@
-package io.tryme.projectfour.world.gen.feature;
+package io.tryme.projectfour.world.feature;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
@@ -15,5 +15,9 @@ public class ModBiomeFeatures {
 
     public static void addRedwoodTrees(GenerationSettings.Builder builder) {
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.REDWOOD_PLACED);
+    }
+
+    public static void addWisteriaTrees(GenerationSettings.Builder builder) {
+        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.WISTERIA_PLACED);
     }
 }

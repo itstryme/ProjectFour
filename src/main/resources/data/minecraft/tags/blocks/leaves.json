@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "projectfour:redwood_leaves",
+    "projectfour:white_wisteria_leaves",
+    "projectfour:blue_wisteria_leaves",
+    "projectfour:pink_wisteria_leaves"
+  ]
+}

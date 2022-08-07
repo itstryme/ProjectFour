@@ -19,7 +19,7 @@ public class BetaText implements HudRenderCallback {
             x = width / 2;
             y = height / 2;
 
-            client.textRenderer.draw(matrixStack, "Dev-0.3.0-040822", x - (x - 10), y - (y - 10), 14737632);
+            client.textRenderer.draw(matrixStack, "Dev-0.3.1-070822", x - (x - 10), y - (y - 10), 14737632);
         }
     }
 }

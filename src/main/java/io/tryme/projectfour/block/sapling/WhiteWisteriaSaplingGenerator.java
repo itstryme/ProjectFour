@@ -7,10 +7,10 @@ import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import org.jetbrains.annotations.Nullable;
 
-public class RedwoodSaplingGenerator extends SaplingGenerator {
+public class WhiteWisteriaSaplingGenerator extends SaplingGenerator {
     @Nullable
     @Override
     protected RegistryEntry<? extends ConfiguredFeature<?, ?>> getTreeFeature(Random random, boolean bees) {
-        return TreeConfiguredFeatures.REDWOOD_TREE;
+        return TreeConfiguredFeatures.WHITE_WISTERIA_TREE;
     }
 }

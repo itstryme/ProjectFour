@@ -2,14 +2,18 @@ package io.tryme.projectfour.block;
 
 import io.tryme.projectfour.ProjectFour;
 import io.tryme.projectfour.block.entity.SignTypes;
+import io.tryme.projectfour.block.sapling.BlueWisteriaSaplingGenerator;
+import io.tryme.projectfour.block.sapling.PinkWisteriaSaplingGenerator;
 import io.tryme.projectfour.block.sapling.RedwoodSaplingGenerator;
 
+import io.tryme.projectfour.block.sapling.WhiteWisteriaSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -104,12 +108,10 @@ public class Blocks {
             ItemGroup.MISC);
 
     public static final Block REDWOOD_WALL_SIGN_BLOCK = registerWithoutBlockItem("redwood_wall_sign",
-            new WallSignBlock(FabricBlockSettings.copy(net.minecraft.block.Blocks.OAK_WALL_SIGN), SignTypes.REDWOOD),
-            ItemGroup.MISC);
+            new WallSignBlock(FabricBlockSettings.copy(net.minecraft.block.Blocks.OAK_WALL_SIGN), SignTypes.REDWOOD));
 
     public static final Block REDWOOD_SIGN_BLOCK = registerWithoutBlockItem("redwood_sign",
-            new SignBlock(FabricBlockSettings.copy(net.minecraft.block.Blocks.OAK_SIGN), SignTypes.REDWOOD),
-            ItemGroup.MISC);
+            new SignBlock(FabricBlockSettings.copy(net.minecraft.block.Blocks.OAK_SIGN), SignTypes.REDWOOD));
 
 
     // Wisteria
@@ -206,6 +208,72 @@ public class Blocks {
                     .nonOpaque()),
             ItemGroup.MISC);
 
+    public static final Block WISTERIA_WALL_SIGN_BLOCK = registerWithoutBlockItem("wisteria_wall_sign",
+            new WallSignBlock(FabricBlockSettings.copy(net.minecraft.block.Blocks.OAK_WALL_SIGN), SignTypes.WISTERIA));
+
+    public static final Block WISTERIA_SIGN_BLOCK = registerWithoutBlockItem("wisteria_sign",
+            new SignBlock(FabricBlockSettings.copy(net.minecraft.block.Blocks.OAK_SIGN), SignTypes.WISTERIA));
+
+    public static final Block PINK_WISTERIA_VINES = registerBlock("pink_wisteria_vines",
+            new WisteriaVine(FabricBlockSettings.of(Material.PLANT, MapColor.PINK)
+                    .ticksRandomly()
+                    .noCollision()
+                    .breakInstantly()
+                    .nonOpaque()
+                    .sounds(BlockSoundGroup.WEEPING_VINES)),
+            ItemGroup.MISC);
+    public static final Block PINK_WISTERIA_VINES_PLANT = registerWithoutBlockItem("pink_wisteria_vines_plant",
+            new WisteriaVinePlant(FabricBlockSettings.of(Material.PLANT, MapColor.PINK)
+                    .noCollision()
+                    .nonOpaque()
+                    .breakInstantly()
+                    .sounds(BlockSoundGroup.WEEPING_VINES)
+                    .dropsLike(PINK_WISTERIA_VINES)));
+
+    public static final Block WHITE_WISTERIA_VINES = registerBlock("white_wisteria_vines",
+            new WisteriaVine(FabricBlockSettings.of(Material.PLANT, MapColor.PINK)
+                    .ticksRandomly()
+                    .noCollision()
+                    .breakInstantly()
+                    .nonOpaque()
+                    .sounds(BlockSoundGroup.WEEPING_VINES)),
+            ItemGroup.MISC);
+    public static final Block WHITE_WISTERIA_VINES_PLANT = registerWithoutBlockItem("white_wisteria_vines_plant",
+            new WisteriaVinePlant(FabricBlockSettings.of(Material.PLANT, MapColor.PINK)
+                    .noCollision()
+                    .nonOpaque()
+                    .breakInstantly()
+                    .sounds(BlockSoundGroup.WEEPING_VINES)
+                    .dropsLike(WHITE_WISTERIA_VINES)));
+
+    public static final Block BLUE_WISTERIA_VINES = registerBlock("blue_wisteria_vines",
+            new WisteriaVine(FabricBlockSettings.of(Material.PLANT, MapColor.PINK)
+                    .ticksRandomly()
+                    .noCollision()
+                    .breakInstantly()
+                    .nonOpaque()
+                    .sounds(BlockSoundGroup.WEEPING_VINES)),
+            ItemGroup.MISC);
+    public static final Block BLUE_WISTERIA_VINES_PLANT = registerWithoutBlockItem("blue_wisteria_vines_plant",
+            new WisteriaVinePlant(FabricBlockSettings.of(Material.PLANT, MapColor.PINK)
+                    .noCollision()
+                    .nonOpaque()
+                    .breakInstantly()
+                    .sounds(BlockSoundGroup.WEEPING_VINES)
+                    .dropsLike(BLUE_WISTERIA_VINES)));
+
+    public static final Block WHITE_WISTERIA_SAPLING = registerBlock("white_wisteria_sapling",
+            new SaplingBlock(new WhiteWisteriaSaplingGenerator(), FabricBlockSettings.copyOf(net.minecraft.block.Blocks.OAK_SAPLING)),
+            ItemGroup.MISC);
+
+    public static final Block BLUE_WISTERIA_SAPLING = registerBlock("blue_wisteria_sapling",
+            new SaplingBlock(new BlueWisteriaSaplingGenerator(), FabricBlockSettings.copyOf(net.minecraft.block.Blocks.OAK_SAPLING)),
+            ItemGroup.MISC);
+
+    public static final Block PINK_WISTERIA_SAPLING = registerBlock("pink_wisteria_sapling",
+            new SaplingBlock(new PinkWisteriaSaplingGenerator(), FabricBlockSettings.copyOf(net.minecraft.block.Blocks.OAK_SAPLING)),
+            ItemGroup.MISC);
+
 
 
     // Registry Methods
@@ -218,7 +286,7 @@ public class Blocks {
         return Registry.register(Registry.ITEM, new Identifier(ProjectFour.MOD_ID, name), new BlockItem(block, new FabricItemSettings().group(group)));
     }
 
-    public static Block registerWithoutBlockItem(String name, Block block, ItemGroup group) {
+    public static Block registerWithoutBlockItem(String name, Block block) {
         return Registry.register(Registry.BLOCK, new Identifier(ProjectFour.MOD_ID, name), block);
     }
 

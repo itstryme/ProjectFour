@@ -37,7 +37,7 @@
                   ]
                 }
               ],
-              "name": "projectfour:wisteria_leaves"
+              "name": "projectfour:pink_wisteria_leaves"
             },
             {
               "type": "minecraft:item",
@@ -56,7 +56,7 @@
                   "enchantment": "minecraft:fortune"
                 }
               ],
-              "name": "projectfour:redwood_sapling"
+              "name": "projectfour:pink_wisteria_sapling"
             }
           ]
         }

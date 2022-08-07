@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "projectfour:block/blue_wisteria_sapling"
+  }
+}

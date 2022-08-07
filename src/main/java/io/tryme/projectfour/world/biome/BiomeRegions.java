@@ -29,5 +29,9 @@ public class BiomeRegions extends Region {
                 0,
                 BiomeKeys.REDWOOD_FOREST);
 
+        this.addModifiedVanillaOverworldBiomes(mapper, builder -> {
+            builder.replaceBiome(net.minecraft.world.biome.BiomeKeys.FOREST, BiomeKeys.WISTERIA_FOREST);
+        });
+
     }
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "projectfour:block/pink_wisteria_vines_plant"
+  }
+}

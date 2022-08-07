@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "projectfour:block/white_wisteria_vines_plant"
+  }
+}

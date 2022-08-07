@@ -24,6 +24,15 @@ public class ProjectFourClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks.WISTERIA_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(Blocks.WISTERIA_TRAPDOOR, RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.WHITE_WISTERIA_VINES, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.WHITE_WISTERIA_VINES_PLANT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.BLUE_WISTERIA_VINES, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.BLUE_WISTERIA_VINES_PLANT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.PINK_WISTERIA_VINES, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.PINK_WISTERIA_VINES_PLANT, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(Blocks.WHITE_WISTERIA_SAPLING, RenderLayer.getCutout());
+
         HudRenderCallback.EVENT.register(new BetaText());
     }
 }
